@@ -1,0 +1,29 @@
+ec_affiliate:
+    resource: "@ECAffiliateBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ec_buyer:
+    resource: "@ECBuyerBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ec_supplier:
+    resource: "@ECSupplierBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ec_admin:
+    resource: "@ECAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ec_auth:
+    resource: "@ECAuthBundle/Resources/config/routing.yml"
+    prefix:   /
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
+
+fos_oauth_server_token:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/token.xml"
+
+fos_oauth_server_authorize:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/authorize.xml"

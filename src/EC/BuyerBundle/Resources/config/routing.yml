@@ -1,0 +1,3 @@
+ec_buyer_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ECBuyerBundle:Default:index }

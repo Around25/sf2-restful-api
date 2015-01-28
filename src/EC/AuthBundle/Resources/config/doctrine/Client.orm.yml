@@ -1,0 +1,36 @@
+EC\AuthBundle\Entity\Client:
+  type: entity
+#  repositoryClass: EC\AuthBundle\Repository\ClientRepository
+  table: oauth_clients
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: AUTO
+#    randomId:
+#      type: string
+#      length: 100
+#      fixed: false
+#      nullable: true
+#      column: random_id
+#    redirectUris:
+#      type: array
+#      column: redirect_uris
+#    secret:
+#      type: string
+#      length: 200
+#      fixed: false
+#      nullable: false
+#    allowedGrantTypes:
+#      type: array
+#      column: allowed_grant_types
+  oneToMany:
+
+  manyToOne:
+
+  manyToMany:
+
+  lifecycleCallbacks: {  }

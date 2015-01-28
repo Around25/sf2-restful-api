@@ -1,0 +1,12 @@
+parameters:
+  ec_auth.user.entity.class: EC\AuthBundle\Entity\User
+  ec_auth.user.provider.class: EC\AuthBundle\Security\Provider\UserProvider
+
+services:
+#    ec_auth.example:
+#        class: EC\AuthBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+  ec_auth.user.provider:
+    class: %ec_auth.user.provider.class%
+    arguments: [ "@service_container" ]

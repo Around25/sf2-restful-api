@@ -1,0 +1,67 @@
+EC\AuthBundle\Entity\User:
+  type: entity
+  repositoryClass: EC\AuthBundle\Repository\UserRepository
+  table: users
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: AUTO
+    firstName:
+      type: string
+      length: 100
+      fixed: false
+      nullable: true
+      column: first_name
+    lastName:
+      type: string
+      length: 100
+      fixed: false
+      nullable: true
+      column: last_name
+    username:
+      type: string
+      length: 100
+      fixed: false
+      nullable: false
+    password:
+      type: string
+      length: 200
+      fixed: false
+      nullable: true
+    salt:
+      type: string
+      length: 100
+      fixed: false
+      nullable: false
+    email:
+      type: string
+      length: 100
+      fixed: false
+    hash:
+      type: string
+      length: 120
+      fixed: false
+      nullable: true
+    isActive:
+      type: boolean
+      nullable: false
+      column: is_active
+    dateCreated:
+      type: datetime
+      nullable: false
+      column: date_created
+    dateModified:
+      type: datetime
+      nullable: true
+      column: date_modified
+  oneToMany:
+
+  manyToOne:
+
+  manyToMany:
+
+  lifecycleCallbacks: {  }

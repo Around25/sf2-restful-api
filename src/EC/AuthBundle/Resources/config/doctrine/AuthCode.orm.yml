@@ -1,0 +1,27 @@
+EC\AuthBundle\Entity\AuthCode:
+  type: entity
+  table: oauth_auth_codes
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: AUTO
+  oneToMany:
+
+  manyToOne:
+    client:
+      targetEntity: Client
+      joinColumn:
+        name: client_id
+        referencedColumnName: id
+    user:
+      targetEntity: User
+      joinColumn:
+        name: user_id
+        referencedColumnName: id
+  manyToMany:
+
+  lifecycleCallbacks: {  }

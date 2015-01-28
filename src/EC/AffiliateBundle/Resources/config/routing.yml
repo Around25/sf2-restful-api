@@ -1,0 +1,3 @@
+ec_affiliate_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ECAffiliateBundle:Default:index }

@@ -1,0 +1,4 @@
+auth_users:
+  type: rest
+  resource: EC\AuthBundle\Controller\UsersController
+  prefix: /api
