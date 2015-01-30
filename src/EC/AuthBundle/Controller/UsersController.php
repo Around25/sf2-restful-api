@@ -8,6 +8,7 @@ use FOS\RestBundle\Request\ParamFetcher;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Symfony\Component\HttpFoundation\Request;
 
 class UsersController extends Controller
 {
@@ -31,9 +32,10 @@ class UsersController extends Controller
      * )
      * @Rest\View
      */
-    public function  postUsersAction()
+    public function  postUsersAction(Request $request)
     {
-        return array();
+        $params = $request->request->all();
+        return array('params'=>$params);
     }
 
     /**
@@ -53,10 +55,13 @@ class UsersController extends Controller
      * @ApiDoc(
      *  description="Delete a user by id"
      * )
+     * @ParamConverter("user", class="ECAuthBundle:User")
      * @Rest\View(statusCode=204)
      */
-    public function  deleteUserAction($id)
+    public function  deleteUserAction(User $user)
     {
+        $this->getDoctrine()->getManager()->remove($user);
+        $this->getDoctrine()->getManager()->flush();
         return array();
     }
 }
