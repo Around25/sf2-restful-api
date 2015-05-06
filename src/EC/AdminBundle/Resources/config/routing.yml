@@ -1,3 +1,0 @@
-ec_admin_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: ECAdminBundle:Default:index }

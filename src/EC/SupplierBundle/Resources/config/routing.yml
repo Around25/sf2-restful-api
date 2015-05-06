@@ -1,3 +1,0 @@
-ec_supplier_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: ECSupplierBundle:Default:index }
